@@ -1,0 +1,30 @@
+ALGORITHM Stce
+VAR
+ch1:STRING
+LStce:INTEGER
+NWds:INTEGER
+NWls:INTEGER
+
+Begin
+
+LStce:=0
+NWds:=0
+NWls:=0
+
+REPEAT 
+
+Read(ch1)
+LStce:=LStce+1
+
+IF(ch1 ==" ")THEN
+NWds:=NWds+1
+END_IF
+
+If(ch1 == "a") || (ch1 == "e") || (ch1 == "i") || (ch1 =="o") || (ch1 =="u") || (ch1 == "y") THEN
+NWls:=NWls+1
+END_IF
+
+UNTIL (ch1 = ".")
+
+Write("number of words : ", NWds, "number of characters :  " , LStce , "number of number of vowels : ", NWls)
+END
